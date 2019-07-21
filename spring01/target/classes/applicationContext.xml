@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="app" class="yyt.App">
+        <property name="m" value="666"></property>
+        <property name="userList">
+            <list>
+                <ref bean="user"></ref>
+            </list>
+        </property>
+        <property name="u" ref="user"></property>
+        <property name="map">
+            <map>
+                <entry key="1" value="a"></entry>
+            </map>
+        </property>
+    </bean>
+    <bean id = "user" class="yyt.User">
+        <property name="name" value="阿伟"></property>
+    </bean>
+
+</beans>
